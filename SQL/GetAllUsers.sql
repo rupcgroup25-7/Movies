@@ -1,0 +1,11 @@
+IF OBJECT_ID('SP_GetAllUsers', 'P') IS NOT NULL
+    DROP PROCEDURE SP_GetAllUsers;
+GO
+
+CREATE PROCEDURE SP_GetAllUsers
+AS
+BEGIN
+    SELECT *
+    FROM UsersTable
+END
+GO

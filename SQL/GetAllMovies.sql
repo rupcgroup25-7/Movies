@@ -1,0 +1,12 @@
+IF OBJECT_ID('SP_GetAllMovies', 'P') IS NOT NULL
+    DROP PROCEDURE SP_GetAllMovies;
+GO
+
+CREATE PROCEDURE SP_GetAllMovies
+AS
+BEGIN
+    SELECT *
+    FROM MoviesTable
+    WHERE deletedAt IS NULL
+END
+GO

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TRD / Add Movie</title>
+    <link rel="icon" type="image" href="../sources/website-icon-white.png" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/forms.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../data/movies.js"></script>
+    <script src="../scripts/utils.js"></script>
+    <script src="../scripts/api.js"></script>
+    <script src="../scripts/app.js"></script>
+    <script src="../scripts/addMovie.js"></script>
+  </head>
+  <body>
+    <nav></nav>
+    <container>
+      <img id="formLetterImg" src="../sources/letter-bg.png" />
+      <form id="movieForm">
+        <h1 id="formTitle">Add New Movie:</h1>
+
+        <div class="form-group">
+          <p for="primaryTitleTB">Title:</p>
+          <input type="text" class="form-control" id="primaryTitleTB" placeholder="Enter movie title" autocomplete="off" />
+        </div>
+
+        <div class="form-group">
+          <p for="descriptionTB">Description:</p>
+          <textarea class="form-control" id="descriptionTB" placeholder="Enter movie description" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <p for="urlTB">URL:</p>
+          <input type="text" class="form-control" id="urlTB" placeholder="Enter movie URL" autocomplete="off" />
+        </div>
+
+        <div class="form-group">
+          <p for="primaryImageTB">Primary Image URL:</p>
+          <input type="text" class="form-control" id="primaryImageTB" placeholder="Enter image URL" autocomplete="off" />
+        </div>
+
+        <div class="form-group">
+          <p for="yearTB">Year:</p>
+          <input type="number" class="form-control" id="yearTB" placeholder="Enter release year" />
+        </div>
+
+        <div class="form-group">
+          <p for="releaseDateTB">Release Date:</p>
+          <input type="date" class="form-control" id="releaseDateTB" />
+        </div>
+
+        <div class="form-group">
+          <p for="languageTB">Language:</p>
+          <input type="text" class="form-control" id="languageTB" placeholder="Choose language" list="languageList" autocomplete="off" />
+          <datalist id="languageList"> </datalist>
+        </div>
+
+        <div class="form-group">
+          <p for="budgetTB">Budget ($):</p>
+          <input type="number" class="form-control" id="budgetTB" placeholder="Enter budget amount" step="1" />
+        </div>
+
+        <div class="form-group">
+          <p for="grossWorldwideTB">Gross Worldwide ($):</p>
+          <input type="number" class="form-control" id="grossWorldwideTB" placeholder="Enter worldwide gross" step="1" value="0" />
+        </div>
+
+        <div class="form-group">
+          <p for="genresTB">Genres:</p>
+          <input type="text" class="form-control" id="genresTB" placeholder="Enter genres separated by commas" list="genresList" autocomplete="off" />
+          <datalist id="genresList"> </datalist>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <p for="isAdultCB">Adult Content?</p>
+          <input type="checkbox" id="isAdultCB" />
+        </div>
+
+        <div class="form-group">
+          <p for="runtimeMinutesTB">Runtime (minutes):</p>
+          <input type="number" class="form-control" id="runtimeMinutesTB" placeholder="Enter runtime in minutes" />
+        </div>
+
+        <div class="form-group">
+          <p for="averageRatingTB">Average Rating:</p>
+          <input type="number" class="form-control" id="averageRatingTB" placeholder="Enter average rating" step="0.1" value="0" />
+        </div>
+
+        <div class="form-group">
+          <p for="numVotesTB">Number of Votes:</p>
+          <input type="number" class="form-control" id="numVotesTB" placeholder="Enter number of votes" value="0" />
+        </div>
+
+        <input type="submit" id="submitButton" value="Add Movie" />
+      </form>
+    </container>
+    <footer></footer>
+  </body>
+</html>
